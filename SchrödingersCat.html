@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🧪 Schrödinger's Game: Quantum Mayhem</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
+
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(to right, #000000, #0f0f0f);
+      color: #fff;
+      text-align: center;
+      padding: 50px;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      font-size: 3.5em;
+      margin-bottom: 10px;
+      color: #00ffc8;
+      text-shadow: 0 0 10px #0ff;
+    }
+
+    .box {
+      background-color: rgba(30, 30, 30, 0.9);
+      border-radius: 20px;
+      padding: 40px;
+      margin-top: 30px;
+      box-shadow: 0 0 30px #00ffe5;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      transition: all 0.5s ease-in-out;
+    }
+
+    .button {
+      margin: 15px;
+      padding: 15px 30px;
+      background: linear-gradient(to right, #00ffc8, #00c8ff);
+      color: #000;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.2em;
+      cursor: pointer;
+      transition: all 0.3s;
+      box-shadow: 0 4px 8px rgba(0,255,200,0.3);
+    }
+
+    .button:hover {
+      transform: scale(1.07);
+      background: linear-gradient(to right, #00ffea, #00aaff);
+    }
+
+    #result {
+      font-size: 1.6em;
+      margin-top: 30px;
+      min-height: 120px;
+      padding: 20px;
+      background-color: #111;
+      border-radius: 15px;
+      border: 1px solid #00ffc8;
+      box-shadow: inset 0 0 10px #0ff;
+      animation: fadeIn 0.4s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 0.9em;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🐱 Schrödinger's Game: Quantum Mayhem</h1>
+  <p style="font-size: 1.2em; color: #ccc;">Collapse the wavefunction, or let chaos continue?</p>
+
+  <div class="box">
+    <button class="button" onclick="play('observe')">🔍 Open the Box (Observe)</button>
+    <button class="button" onclick="play('leave')">⏳ Leave it Alone (Superposition)</button>
+    <button class="button" onclick="play('entangle')">🧬 Entangle with Another Cat</button>
+    <button class="button" onclick="play('meditate')">🧘 Meditate on Its Fate</button>
+    <button class="button" onclick="play('reverse')">⏪ Reverse Time (Quantum Undo)</button>
+
+    <div id="result"></div>
+  </div>
+
+  <footer>
+    🧠 Powered by GPT-M & Schrödinger's leftover tuna.
+  </footer>
+
+  <script>
+    const quantumOutcomes = {
+      observe: [
+        "Wavefunction collapsed. The cat is... meowing angrily at your curiosity.",
+        "You opened the box. It's alive. You monster.",
+        "Boom! The cat is dead. You are now morally responsible.",
+        "Congratulations, you've destroyed infinite possibilities. Welcome to classical physics.",
+        "The cat looks at you with Schrödinger's disappointment."
+      ],
+      leave: [
+        "The cat remains both alive and dead. Quantum peace is preserved.",
+        "Superposition intensifies. The cat now exists in 4 dimensions.",
+        "The box vibrates slightly. You're scared but intrigued.",
+        "You are now in entangled states with the cat. Better not move.",
+        "The cat evolved into a quantum probability cloud."
+      ],
+      entangle: [
+        "Two cats now share the same destiny. Or do they?",
+        "Entanglement complete. If one cat dies, the other calls 911.",
+        "You've invented quantum telepathy. The cats exchange memes.",
+        "This is how multiverse cat drama begins.",
+        "One cat meows in one box, the other twitches in another universe."
+      ],
+      meditate: [
+        "You tried to observe without observing. The cat laughs in uncertainty.",
+        "Quantum Zen achieved. You no longer care about the result.",
+        "You're now part of the experiment. Schrödinger's You.",
+        "The cat observed you back. You're in the box now.",
+        "Your consciousness is entangled with feline uncertainty."
+      ],
+      reverse: [
+        "Time reversed. The cat un-meows into a state of maybe-existence.",
+        "You've broken causality. Please do not tell Einstein.",
+        "All particles go back to sleep. Including the radioactive one.",
+        "The cat rewinds into a kitten. Awww, paradox cute mode activated."
+      ]
+    };
+
+    function play(action) {
+      const options = quantumOutcomes[action];
+      const result = options[Math.floor(Math.random() * options.length)];
+      const output = document.getElementById("result");
+      output.textContent = result;
+      output.style.animation = 'none';
+      output.offsetHeight;
+      output.style.animation = null;
+    }
+  </script>
+
+</body>
+</html>
